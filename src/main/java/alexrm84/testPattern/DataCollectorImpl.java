@@ -1,19 +1,14 @@
 package alexrm84.testPattern;
 
-import alexrm84.testPattern.utils.Smart;
-import alexrm84.testPattern.utils.Temperature;
-
 public class DataCollectorImpl implements DataCollector {
-    private Smart smart;
-    private Temperature temperature;
+    private DataSet dataSet;
 
     @Override
-    public Smart getSmart(String hddName) {
-        return null;
-    }
-
-    @Override
-    public Temperature getTemperature() {
-        return null;
+    public DataSet getData(EnumData enumData) {
+        switch (enumData) {
+            case SMART: dataSet = new Smart();
+            case TEMPERATURE: dataSet = new Temperature();
+        }
+        return dataSet;
     }
 }

@@ -1,4 +1,4 @@
-package alexrm84.testPattern.utils;
+package alexrm84.testPattern;
 
 import lombok.Data;
 
