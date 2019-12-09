@@ -1,6 +1,8 @@
 package alexrm84.testPattern;
 
 public class CreationFactory {
+    private final DataCollector DATA_COLLECTOR = new DataCollectorImpl();
+    private final Network NETWORK = new NetworkImpl();
     private static volatile CreationFactory instance;
     private CreationFactory(){}
     public static CreationFactory getInstance() {
@@ -15,10 +17,10 @@ public class CreationFactory {
     }
 
     public DataCollector createDataCollector() {
-        return new DataCollectorImpl();
+        return DATA_COLLECTOR;
     }
 
     public Network createNetwork(){
-        return new NetworkImpl();
+        return NETWORK;
     }
 }
