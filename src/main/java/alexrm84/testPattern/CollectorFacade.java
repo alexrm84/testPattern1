@@ -2,14 +2,14 @@ package alexrm84.testPattern;
 
 import java.time.LocalDateTime;
 
-public class CollectorFacade {
+public class CollectorFacade extends MySubject {
     private DataCollector dataCollector;
     private Network network;
     private InfoMSG msg;
 
     public CollectorFacade(){
-        dataCollector = CreationFactory.getInstance().createDataCollector();
-        network = CreationFactory.getInstance().createNetwork();
+        dataCollector = CreationFactory.getInstance().getDataCollector();
+        network = CreationFactory.getInstance().getNetwork();
         msg = new InfoMSG();
     }
 
@@ -19,5 +19,6 @@ public class CollectorFacade {
          msg.setSmart((Smart) dataCollector.getData(EnumData.SMART));
          msg.setTemperature((Temperature)dataCollector.getData(EnumData.TEMPERATURE));
          network.sendInfo(msg);
+         notify("the data has been collected and send");
      }
 }

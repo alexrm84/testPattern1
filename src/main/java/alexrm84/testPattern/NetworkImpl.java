@@ -11,6 +11,11 @@ public class NetworkImpl implements Network {
         return null;
     }
 
+    @Override
+    public void sendEMail(String str){
+        System.out.println(str);
+    }
+
     private void start(){}
 
     private void stop(){}
