@@ -16,11 +16,11 @@ public class CreationFactory {
         return instance;
     }
 
-    public DataCollector createDataCollector() {
+    public DataCollector getDataCollector() {
         return DATA_COLLECTOR;
     }
 
-    public Network createNetwork(){
+    public Network getNetwork(){
         return NETWORK;
     }
 }
