@@ -1,5 +1,6 @@
-package alexrm84.testPattern;
+package alexrm84.testPattern.entities;
 
+import alexrm84.testPattern.DataSet;
 import lombok.Data;
 
 @Data

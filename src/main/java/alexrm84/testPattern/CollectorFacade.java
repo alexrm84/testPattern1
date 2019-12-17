@@ -1,5 +1,9 @@
 package alexrm84.testPattern;
 
+import alexrm84.testPattern.entities.InfoMSG;
+import alexrm84.testPattern.entities.Smart;
+import alexrm84.testPattern.entities.Temperature;
+
 import java.time.LocalDateTime;
 
 public class CollectorFacade extends MySubject {

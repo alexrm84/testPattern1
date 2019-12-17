@@ -1,5 +1,8 @@
 package alexrm84.testPattern;
 
+import alexrm84.testPattern.entities.Smart;
+import alexrm84.testPattern.entities.Temperature;
+
 public class DataCollectorImpl implements DataCollector {
     private DataSet dataSet;
 
